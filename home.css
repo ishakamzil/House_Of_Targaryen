@@ -1,0 +1,314 @@
+
+/* start header  */
+
+.header{
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100vh;
+}
+.header .video{
+   /* height: 100%; */
+   text-align: center;
+}
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.708);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+}
+
+.header::after{
+    background: #424242;
+    content: "";
+    height: 40rem;
+    left: -5%;
+    position: absolute;
+    right: -5%;
+    top: 98%;
+    transform-origin: 0 0;
+    transform: rotate(-4deg);
+    z-index: 6;
+    box-shadow: rgba(0.35, 0, 0, 0) -28px -50px 36px 0px inset;
+}
+
+.nav-bar{
+    z-index: 7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar h2{
+    margin: 0 20px;
+    color: #c3a08c;
+    
+}
+
+.nav-bar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: flex-end;
+    transition: 2s;
+}
+
+.nav-bar .bar{
+    margin: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+.nav-bar .bar .flesh{
+  content: "";
+  position: absolute;
+  border: solid 10px;
+  border-color: transparent transparent #424242 transparent;
+  top: 25px;
+  left: 5px;
+  z-index: 10;
+  display: none;
+}
+
+.nav-bar ul li{
+margin: 0 20px;
+cursor: pointer;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+color: #FFFFFF;
+cursor: pointer;
+
+}
+
+
+
+
+.header .text{
+    z-index: 10;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: -900px;
+    transform: translateY(-50%);
+    width: 45%;
+    padding: 40px;
+    background-color: #424242cf;
+    display: flex;
+    justify-content: flex-end;
+    transition: 5s ease-in;
+    animation-name: come;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+.header .text .content{
+    max-width: 85%;
+}
+
+.header .text .content h3{
+    color: black;
+    font-weight: bold;
+}
+.header .text .content p{
+   opacity: .7;
+}
+
+
+/* start text animation */
+@keyframes come {
+    0%{
+        left: -500px;
+        opacity: 0;
+    }
+    50%{
+        left: 10px;
+        opacity: 1;
+    }
+    100%{
+       left: 0;
+       opacity: 1;
+    }
+}
+
+/* end text animation */
+
+.Aemond{
+    position: absolute;
+    z-index: 8;
+    right: 0;
+}
+
+.go-down{
+    position: absolute;
+    z-index: 10;
+cursor: pointer;
+transition: 3s ease-in;
+animation: up 1.5s forwards 2s ,
+scale 1.5s ease-in 4s infinite normal forwards;
+
+top: 93%;
+opacity: 0;
+
+}
+
+.go-down img{
+    width: 30px;
+}
+
+@keyframes up {
+    0%{
+      top: 98%;
+      opacity: 0;
+    }
+    50%{
+       top: 92%;
+       opacity: 1;
+    }
+    100%{
+      top: 93;
+      opacity: 1;
+    }
+}
+@keyframes scale {
+    0%{
+     transform: scale(0.5);
+    }
+
+    50%{
+        transform: scale(1);
+
+    }
+    100%{
+        transform: scale(0.5);
+    }
+}
+/* start header  */
+
+/* start media */
+
+
+@media (max-width: 850px) {
+    .header .text{
+        width: auto;
+        z-index: 9;
+        
+    padding: 20px 10;
+    }
+    .header .text .content{
+        max-width: inherit;
+    }
+    .Aemond{
+        display: none;
+    }
+
+    .go-down{
+        top: 90%;
+    }
+    .header .video{
+        width: 2000px;
+     }
+}
+
+@media (max-width: 822px) {
+    .header .text{
+        width: auto;
+        z-index: 9;
+        
+    padding: 20px 10;
+    }
+    .header .text .content{
+        max-width: inherit;
+    }
+    .Aemond{
+        top: 6%;
+        display: block;
+    }
+
+    .go-down{
+        top: 96%;
+    }
+    .header .video{
+       
+    height: -webkit-fill-available;
+
+     }
+}
+
+
+@media (max-width: 450px) {
+    .header .text{
+        width: auto;
+        z-index: 9;
+        
+    padding: 10px;
+    }
+   
+    .go-down{
+        top: 95%;
+    }
+   
+}
+
+@media (max-width: 450px) {
+    .header .video{
+        height: 100%;
+     }
+    .nav-bar .bar{
+     display: block;
+    }
+    
+    .nav-bar ul{
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background: #424242;
+        padding: 5px;
+        display: block;
+        z-index: 20;
+        display: none;
+    }
+    .nav-bar ul li {
+        margin: 5px;
+        padding: 5px 0;
+    }
+    .nav-bar ul li:nth-child(2) {
+        border-bottom: 1px solid;
+       
+    }
+    .nav-bar ul li:nth-child(3) {
+        border-bottom: 1px solid;
+       
+    }
+    .nav-bar ul li:first-child {
+        border-bottom: 1px solid;
+       
+    }
+    .Aemond{
+        top: 5%;
+    right: 100px;
+    display: none;
+    }
+    .Aemond img{
+        width: 300px;
+    }
+
+}
+
+/* end media */

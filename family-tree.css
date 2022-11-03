@@ -1,0 +1,21 @@
+.family_tree{
+    padding: 30px 30px;
+    top: 150px;
+    overflow: hidden;
+}
+
+.family_tree .title{
+  margin-bottom: 33px;
+}
+
+.family_tree .tree{ 
+       text-align: center;
+    position: relative;
+}
+
+.family_tree .tree img{
+ max-width: 100%;
+ -webkit-box-shadow: -8px -9px 32px -1px rgba(0,0,0,1);
+-moz-box-shadow: -8px -9px 32px -1px rgba(0,0,0,1);
+box-shadow: -8px -9px 32px -1px rgba(0,0,0,1);
+}

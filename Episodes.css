@@ -1,0 +1,213 @@
+.sassone-1{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 120px 30px;
+}
+
+
+.sassone-1 .episodes{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: 1.5s;
+}
+
+
+
+.sassone-1 .episodes .episode{
+    overflow: hidden;
+    width: 270px;
+    height: 160px;
+    background: url(image/eipsod-image.jpg);
+    background-size: cover;
+    margin: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    position: relative;
+}
+
+
+.sassone-1 .episodes .episode .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 200px;
+    background: #00000073;
+    transition: .5s;
+}
+.sassone-1 .episodes .episode:hover .content{
+   animation: top  .5s forwards;
+}
+
+.sassone-1 .episodes .episode .content img{
+    width: 50px;
+    position: relative;
+    top: 40px;
+    cursor: pointer;
+}
+
+.sassone-1 .episodes .episode .content .name{
+    
+}
+.sassone-1 .episodes .episode .content .title {
+ 
+ position: relative;
+ top: 50px;
+}
+
+
+.sassone-1 .episodes .episode .content .title p{
+    color:  lightyellow;  
+   }
+
+   @keyframes top {
+    0%{
+     top: 200px;
+    }
+    70%{
+     top: -3px;
+    }
+    100%{
+    top: 0;
+    }
+   } 
+
+   .sassone-1 .next-rgith{
+    z-index: 4;
+    position: absolute;
+    top: 77.4px;
+    right: 0;
+    width: 60px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.271);
+    text-align: center;
+    border-radius: 20px 0 0 20px;
+   }
+
+   .sassone-1 .next-rgith img{
+    position: relative;
+    top: 52px;
+    width: 50px;
+    cursor: pointer;
+   }
+
+   .sassone-1 .next-left{
+    z-index: 4;
+    position: absolute;
+    top: 77.4px;
+    left: 0;
+    width: 60px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.271);
+    text-align: center;
+    border-radius: 20px 0 0 20px;
+    display: none;
+    
+   }
+
+   .sassone-1 .next-left img{
+    position: relative;
+    top: 52px;
+    width: 50px;
+    cursor: pointer;
+    transform: rotateZ(180deg);
+   }
+
+
+    
+
+   .home_icone{
+    position: fixed;
+    z-index: 100;
+    bottom: -10px;
+    right: 15px;
+    opacity: 0;
+    
+   }
+
+   .home_icone img{
+    width: 44px;
+   }
+
+   .home_icone.show{
+    transition: 1s;
+    animation: up2 1.5s forwards 2s ,
+    scale2 1.5s ease-in 4s infinite normal forwards;
+   }
+
+   @keyframes up2 {
+    0%{
+      bottom: -10px;
+      opacity: 0;
+    }
+    70%{
+       bottom: 15px;
+       opacity: 1;
+    }
+    100%{
+      bottom: 10px;
+      opacity: 1;
+    }
+}
+
+@keyframes scale2 {
+    0%{
+     transform: scale(0.8);
+    }
+
+    50%{
+        transform: scale(1);
+
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .sassone-1 .episodes {
+        z-index: 1;
+        /* display: flex; */
+        /* position: absolute; */
+        left: 0;
+        transition: 1.5s;
+        display: grid;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,200px);
+        grid-auto-rows: minmax(200px,auto);
+        grid-gap: 20px;
+        position: inherit;
+    }
+    .sassone-1 .episodes .episode {
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+    }
+    .sassone-1 {
+        height: auto !important;
+    }
+    .sassone-1 .next-rgith {
+     
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    .sassone-1 .episodes {
+      
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(10, 200px);
+    }
+    .sassone-1 {
+        margin: 180px 20px;
+        margin-bottom: 100px;
+    }
+  
+}

@@ -1,0 +1,88 @@
+.footer{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.797);
+    height: auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.footer .part1{
+    width: 50%;
+}
+
+.footer .part1 .logo{
+    display: flex;
+    width: 100%;
+    margin: 10px;
+}
+.footer .part1 .logo img{
+    width: 42px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.footer .part1 h2{
+    color: #ab0101;
+}
+
+.footer .part1 .text {
+    margin-left: 30px;
+}
+
+.footer .part1 .text p{
+  color: wheat;
+}
+
+.footer .links_Sh{
+    margin: 10px
+}
+
+.footer .links_Sh a{
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* start part2 */
+
+.part2{
+width: 40%;
+    flex-basis: fit-content;
+}
+
+.part2 .address{
+    inline-size: min-content;
+    margin-right: 10px;
+}
+.part2 .address h3{
+    margin: 20px 20px 10px;
+}
+
+.part2 .address h4{
+    color: darkred;
+}
+
+.part2 .web_maker_sm{
+    position: absolute;
+    bottom: 0;
+    margin: 20px 0;
+}
+
+.part2 .web_maker_sm h3{
+    margin-bottom: 10px;
+}
+
+.part2 .web_maker_sm a{
+    margin-right: 10px;
+}
+
+
+.last{
+    padding: 15px ;
+    text-align: center;
+    color: darkred;
+    background-color: rgba(0, 0, 0, 0.797);
+    
+}
+
